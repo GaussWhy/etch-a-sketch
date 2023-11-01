@@ -9,6 +9,16 @@
 </head>
 
 <body>
+    <div class="grid-container"></div>
 
+<script>
+    let gridContainer = document.querySelector('div');
+
+    for (let i = 0; i < 256; i++) {
+        let gridSquare = document.createElement('div');
+        gridSquare.classList.add('grid-item');
+        gridContainer.appendChild(gridSquare);
+    }
+</script>
 </body>
 </html>
