@@ -6,7 +6,7 @@
     border: 2px solid black;
 }
 
-.grid-item {
+.grid-square {
     width: 100px;
     padding-top: 100%;
     background-color: white;
