@@ -9,10 +9,19 @@
 </head>
 
 <body>
+    <h1>Etch-A-Sketch : Browser Version</h1>
+
+    <div class="buttons">
+        <button>Change Grid</button>
+        <button>Clear</button>
+        <button>Erase</button>
+        <button>Draw</button>
+    </div>
+
     <div class="grid-container"></div>
 
 <script>
-    let gridContainer = document.querySelector('div');
+    let gridContainer = document.getElementsByClassName('grid-container')[0];
 
     for (let i = 0; i < 256; i++) {
         let gridSquare = document.createElement('div');
