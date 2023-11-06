@@ -30,13 +30,26 @@
 
         gridSquare.addEventListener('mouseover', () => {
             gridSquare.style.background = 'aquamarine';
-        })
+        });
 
         let clearButton = document.querySelectorAll('button')[0];
         clearButton.addEventListener('click', () => {
             gridSquare.style.background = 'white';
         });
       
+        let eraseButton = document.querySelectorAll('button')[1];
+        eraseButton.addEventListener('click', () => {
+            gridSquare.addEventListener('mouseover', () => {
+                gridSquare.style.background = 'white';
+            });
+        });
+
+        let drawButton = document.querySelectorAll('button')[2];
+        drawButton.addEventListener('click', () => {
+            gridSquare.addEventListener('mouseover', () => {
+                gridSquare.style.background = 'aquamarine';
+            });
+        });
 
     }
 
