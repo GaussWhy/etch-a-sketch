@@ -12,10 +12,10 @@
     <h1>Etch-A-Sketch : Browser Version</h1>
 
     <div class="buttons">
-        <button>Change Grid</button>
         <button>Clear</button>
         <button>Erase</button>
         <button>Draw</button>
+        <button>Instructions</button>
     </div>
 
     <div class="grid-container"></div>
@@ -29,9 +29,15 @@
         gridContainer.appendChild(gridSquare);
 
         gridSquare.addEventListener('mouseover', () => {
-            gridSquare.style.background = 'aqua';
+            gridSquare.style.background = 'aquamarine';
         })
+
+        let clearButton = document.querySelectorAll('button')[0];
+        clearButton.addEventListener('click', () => {
+            gridSquare.style.background = 'white';
+        });
       
+
     }
 
 </script>
