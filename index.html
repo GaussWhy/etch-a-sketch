@@ -20,18 +20,25 @@
 
     <div class="grid-container"></div>
 
+    <div class="footer">
+        <div>Copyright © 2023 GaussWhy</div>
+    </div>
+    
 <script>
     let gridContainer = document.getElementsByClassName('grid-container')[0];
 
+    // Creating the 16 x 16 Grid
     for (let i = 0; i < 256; i++) {
         let gridSquare = document.createElement('div');
         gridSquare.classList.add('grid-square');
         gridContainer.appendChild(gridSquare);
 
+        // Creating hover effect when mouse passes over square
         gridSquare.addEventListener('mouseover', () => {
             gridSquare.style.background = 'aquamarine';
         });
 
+        // Adding Event Listeners for the Four Buttons
         let clearButton = document.querySelectorAll('button')[0];
         clearButton.addEventListener('click', () => {
             gridSquare.style.background = 'white';
@@ -49,6 +56,11 @@
             gridSquare.addEventListener('mouseover', () => {
                 gridSquare.style.background = 'aquamarine';
             });
+        });
+        // Clicking this button will open up a new window with Instructions
+        let instructionButton = document.querySelectorAll('button')[3];
+        instructionButton.addEventListener('click', () => {
+            window.open('instructions.html', '_blank', 'width=600, height=400');
         });
 
     }
